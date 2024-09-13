@@ -1,0 +1,62 @@
+ .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    background-color: #000;
+    color: #fff;
+    border: rgb(232, 59, 88) solid 5px;
+    width: 100vw;
+  }
+
+  .Footernav
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 5px red solid;
+    height: 2rem;
+    width: 100vw;
+    
+  }
+
+  .Footernav .contact
+  {
+    display: flex;
+    flex-direction: column;
+   }
+   
+   .contact a   {
+    text-decoration: none;
+    color: white;
+    }
+
+    .socials
+    {
+        height: 2rem;
+        width: 100vw;
+        border: 3px solid rgb(43, 93, 110);
+    }
+
+  Footer .logo p {
+    margin: 20px 0;
+  }
+
+
+  .legal {
+
+    display: flex;
+    flex-direction: row;
+    color: grey;
+    border: solid green 3px;
+  }
+  
+  .legal i {
+    color: red;
+  }
+  @media screen and (max-width: 768px) {
+    Footer .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

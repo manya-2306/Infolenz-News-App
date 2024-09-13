@@ -1,0 +1,73 @@
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    height: auto;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: #ece2e1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.cardcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card a {
+    font-size: 1.3rem;
+    color: #6e5d5b;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:all 0.3s ease;
+}
+
+.card a:hover{
+    text-decoration:underline #6e5d5b;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #4f4b4b;
+    font-weight: 400;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card button {
+    padding: 0.5rem 1rem;
+    background-color: #7a797d;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #6e5d5b;
+}
