@@ -1,40 +1,44 @@
 import React from "react"
 import "./Footer.css"
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <>
-        <div className='container'>
+        < div className='container'>
 
-            <div className="Footernav">
+            <div className="footernav1">
 
-                <h5>ABOUT US</h5>
-                <h5>AWARDS</h5>
-                <h5>HELP</h5>
+                <div className="info">
+                    <a href="">ABOUT US</a>
+                    <a href="">AWARDS</a>
+                    <a href="">HELP</a>
+                </div>
 
                 <div className="contact">
 
                     <h5>CONTACT US</h5>
-                    <a href="">abcd.gmail.com</a>
+                    <a href="random123email.gmail.com">random123email.gmail.com</a>
                     <a href="">9811503262</a>
                 </div>
 
+            </div>
+
+            <div className="footernav2">
+                
                 <div className="socials">
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                    <a href="https://facebook.com" > <FaFacebook  style={{color:'black',fontSize:'1.5rem'}}/> </a>
+                    <a href="https://twitter.com"  > <FaTwitter   style={{color:'black',fontSize:'1.5rem'}}/> </a>
+                    <a href="https://instagram.com"> <FaInstagram style={{color:'black',fontSize:'1.5rem'}}/> </a>
                 </div>
 
-            <div className='legal  '>
-            <p>© all rights reserved</p>
-            <p>
-                made with <i className='fa fa-heart'></i> by gorkhcoder
-            </p>
-            </div>
+                <div className='legal'>
+                    <p>© all rights reserved</p>
+                    <p>made with &#10084; by gorkhcoder</p>
+                </div>
 
             </div>
+
         </div>      
    
     </>

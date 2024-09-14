@@ -47,6 +47,7 @@ function App() {
         categoryclick={handleCategoryClick}
       />
       <Card data={newsData} />
+      <Footer/>
     </div>
   );
 }

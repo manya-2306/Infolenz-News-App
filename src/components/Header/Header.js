@@ -5,7 +5,7 @@ const Header = ({ search, onSearchChange, onSearchClick,categoryclick }) => {
     <div className="header">
 
       <div className="navbar">
-        <big><h1>FACTLENZ</h1></big>
+        <big><h1>FACT-LENZ</h1></big>
         <img src="" alt="" />
         <h2>YOUR LENS TO THE WORLD'S MOST IMPORTANT STORIES</h2> 
         

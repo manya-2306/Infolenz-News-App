@@ -1,62 +1,93 @@
- .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 10rem;
-    background-color: #000;
-    color: #fff;
-    border: rgb(232, 59, 88) solid 5px;
-    width: 100vw;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10rem;
+  background-color: #00cccc; /* Teal background */
+  color: #000000;
+  border-radius: 12px; 
+  max-width:100%;
+}
 
-  .Footernav
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border: 5px red solid;
-    height: 2rem;
-    width: 100vw;
-    
-  }
+.footernav1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 35%;
+  width: 100%;
+  padding-top: .5rem;
+}
 
-  .Footernav .contact
-  {
-    display: flex;
-    flex-direction: column;
-   }
-   
-   .contact a   {
-    text-decoration: none;
-    color: white;
-    }
+.info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90%;
+  width: 60%;
+  font-size: 1.5rem;
+  font-weight: 650;
+  text-shadow: 0 2px 25px #000000;
+}
 
-    .socials
-    {
-        height: 2rem;
-        width: 100vw;
-        border: 3px solid rgb(43, 93, 110);
-    }
+.info a {
+  text-decoration: none;
+  color: #000000;
+}
 
-  Footer .logo p {
-    margin: 20px 0;
-  }
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:flex-end;
+  width: 40%;
+  gap:.5rem;
+}
 
+.contact h5 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  text-shadow: 0 2px 25px #000000;
+}
+ 
+.contact a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  display: flex;
+  height: 90%;
+  width: 30%;
+}
 
-  .legal {
+.footernav2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  height: 65%;
+  width: 100%; 
+  gap:1rem;
+}
 
-    display: flex;
-    flex-direction: row;
-    color: grey;
-    border: solid green 3px;
-  }
-  
-  .legal i {
-    color: red;
-  }
-  @media screen and (max-width: 768px) {
-    Footer .container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+.socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 15%;
+}
+
+.legal {  
+  display: flex;
+  flex-direction: column; 
+  justify-content:flex-start;
+  align-items:flex-end;
+  height: 100%;
+  width: 18%;
+  padding-top: 1.3rem;
+}
