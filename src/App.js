@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [newsData, setNewsData] = useState([]);
-  const [search, setSearch] = useState("india");
+  const [search, setSearch] = useState("India");
 
   const API_KEY = "95fe4b51e4904fbdb5c88d0cc64d3a5b";
 
@@ -35,7 +35,7 @@ function App() {
   }
 
   useEffect(()=>{
-    getData()
+    getData('India')
   },[])
 
   return (

@@ -13,15 +13,9 @@ const Footer = () => {
                     <a href="">ABOUT US</a>
                     <a href="">AWARDS</a>
                     <a href="">HELP</a>
+                    <a href="">CONTACT US</a>
                 </div>
-
-                <div className="contact">
-
-                    <h5>CONTACT US</h5>
-                    <a href="random123email.gmail.com">random123email.gmail.com</a>
-                    <a href="">9811503262</a>
-                </div>
-
+                
             </div>
 
             <div className="footernav2">

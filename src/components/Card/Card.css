@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 2rem;
 }
 
 .card {
@@ -17,8 +17,8 @@
     height: auto;
     width: 20rem;
     border-radius: 0.5rem;
-    background-color: #111; /* Black background */
-    box-shadow: 0 4px 8px rgba(0, 204, 204, 0.4); /* Teal shadow */
+    background-color: #111;
+    box-shadow: 2px 4px 8px rgba(0, 204, 204, 0.4);
 }
 
 .card img {
@@ -37,7 +37,7 @@
 
 .card a {
     font-size: 1.3rem;
-    color: #00cccc; /* Teal text */
+    color: #00cccc;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
@@ -50,7 +50,7 @@
 
 .card p {
     font-size: 1rem;
-    color: #fff; /* White text */
+    color: #fff; 
     font-weight: 400;
     text-align: center;
     max-height: 6rem;
@@ -60,7 +60,7 @@
 
 .card button {
     padding: 0.5rem 1rem;
-    background-color: #00cccc; /* Teal button */
+    background-color: #00cccc;
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -69,5 +69,5 @@
 }
 
 .card button:hover {
-    background-color: #009999; /* Darker teal on hover */
+    background-color: #009999;
 }

@@ -1,12 +1,12 @@
 .header {
-    height: 20rem;
+    height: 16rem;
     border: none; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 1rem;
-    background-color: #111; /* Black background */
+    padding: 1.5rem;
+    background-color: #000000; /* Black background */
     box-shadow: 0 4px 8px rgba(0, 204, 204, 0.3); /* Teal shadow */
 }
 
@@ -23,23 +23,50 @@
     padding: 0.5rem;
     border-radius: 12px; 
     box-shadow: 0 2px 12px rgba(0, 204, 204, 0.4); /* Teal shadow */
+    /* border: 3px solid red; */
 }
 
 .navbar h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #000000;
     margin: 0;
     font-weight: 700;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
+    /* border: 3px solid brown;  */
 }
+/* 
+.glass
+{
+    height: 8rem;
+    width: 8rem;
+    opacity: .35;
+    margin-left: -5rem;
+    border: 3px solid blueviolet; 
+} */
 
 .navbar h2 {
     font-size: 1.5rem;
-    color: #111; /* Black text */
+    color: #000000;
     font-style: italic;
     font-weight: 500;
-    text-shadow: 0 2px 20px #000000; /* Teal text-shadow */
+    text-shadow: 0 2px 20px #000000;
 }
+
+.magnify {
+    display: inline-block;
+    cursor: none;
+  }
+
+.char {
+    display: inline-block; 
+    transition: transform 0.35s ease;
+}
+  
+.char:hover {    
+    transform: scale(2);
+    font-weight: 600;
+}
+
 
 .searchbar input {
     width: 15rem;
@@ -48,7 +75,8 @@
     border-radius: 8px;
     background-color: #fafafa;
     font-size: 1rem;
-    color: #111; /* Black text */
+    color: #111;
+    text-align: center;
 }
 
 .searchbar button {
@@ -70,21 +98,20 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    width: 75%;
+    width: 100%;
     height: 50%;
-    background-color: #111; /* Black background */
+    background-color: #000000; /* Black background */
     border-radius: 12px;
     padding: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 204, 204, 0.4); /* Teal shadow */
 }
 
 .category button {
     width: 10rem;
     height: 4rem;
+    background-color: #000000; /* Black background */
     border-radius: 20px;
-    background-color: #00cccc; /* Teal button */
     border: none;
     color: #f0efef;
     font-size: 1rem;
@@ -94,13 +121,14 @@
 }
 
 .category button:hover {
+    border-radius: 20px;
     background-color: #009999; /* Darker teal */
     transform: scale(1.05); 
 }
 
 body {
     font-family: 'Arial', sans-serif; 
-    background-color: #111; /* Black background */
+    background-color: #000000; /* Black background */
     margin: 0;
     padding: 0;
     color: #fff; /* White text */
