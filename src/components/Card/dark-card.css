@@ -1,13 +1,14 @@
-.cardcontainer {
+.dark-mode .cardcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 1rem;
     padding: 2rem;
+    background-color: #111;
 }
 
-.card {
+.dark-mode .card {
     border: none;
     display: flex;
     flex-direction: column;
@@ -17,25 +18,25 @@
     height: auto;
     width: 20rem;
     border-radius: 0.5rem;
-    background-color: #111;
+    background-color: #111; /* Dark background */
     box-shadow: 2px 4px 8px rgba(0, 204, 204, 0.4);
 }
 
-.card img {
+.dark-mode .card img {
     height: 12rem;
     width: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
 }
 
-.cardcontent {
+.dark-mode .cardcontent {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.card a {
+.dark-mode .card a {
     font-size: 1.3rem;
     color: #00cccc;
     font-weight: 700;
@@ -44,11 +45,11 @@
     transition: all 0.3s ease;
 }
 
-.card a:hover {
+.dark-mode .card a:hover {
     text-decoration: underline #00cccc;
 }
 
-.card p {
+.dark-mode .card p {
     font-size: 1rem;
     color: #fff; 
     font-weight: 400;
@@ -58,7 +59,7 @@
     text-overflow: ellipsis;
 }
 
-.card button {
+.dark-mode .card button {
     padding: 0.5rem 1rem;
     background-color: #00cccc;
     color: white;
@@ -68,6 +69,6 @@
     transition: background-color 0.3s ease;
 }
 
-.card button:hover {
+.dark-mode .card button:hover {
     background-color: #009999;
 }

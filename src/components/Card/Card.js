@@ -1,3 +1,6 @@
+import './light-card.css';
+import './dark-card.css';
+
 const Card=({data})=>{
     const altImage = "https://mediaengagement.org/wp-content/uploads/2022/12/News-Desert-Web-Tile-1.png";
 

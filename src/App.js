@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import Header from './components/Header/Header';
-import './components/Header/Header.css';
 import Card from './components/Card/Card';
-import './components/Card/Card.css'; 
 import Footer from './components/Footer/Footer';
 
-
 function App() {
+
+  const [isDark,setIsDark]=useState(true);
   const [newsData, setNewsData] = useState([]);
   const [search, setSearch] = useState("India");
 
@@ -34,17 +33,23 @@ function App() {
     getData(category);
   }
 
+  const handleToggleDark=()=>{
+    setIsDark(!isDark);  
+  }
+ 
   useEffect(()=>{
     getData('India')
   },[])
 
   return (
-    <div className="App">
+    <div className={`App ${isDark?'dark-mode':'light-mode'}`}>
       <Header 
         search={search} 
         onSearchChange={handleSearchChange} 
         onSearchClick={() => getData(search)}
         categoryclick={handleCategoryClick}
+        OnToggleDark={handleToggleDark}
+        isDark={isDark}
       />
       <Card data={newsData} />
       <Footer/>

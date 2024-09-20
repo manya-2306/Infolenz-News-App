@@ -1,4 +1,4 @@
-.header {
+.dark-mode .header {
     height: 16rem;
     border: none; 
     display: flex;
@@ -10,7 +10,7 @@
     box-shadow: 0 4px 8px rgba(0, 204, 204, 0.3); /* Teal shadow */
 }
 
-.navbar {
+.dark-mode .navbar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,7 +26,7 @@
     /* border: 3px solid red; */
 }
 
-.navbar h1 {
+.dark-mode .navbar h1 {
     font-size: 2.8rem;
     color: #000000;
     margin: 0;
@@ -34,17 +34,8 @@
     letter-spacing: 2px;
     /* border: 3px solid brown;  */
 }
-/* 
-.glass
-{
-    height: 8rem;
-    width: 8rem;
-    opacity: .35;
-    margin-left: -5rem;
-    border: 3px solid blueviolet; 
-} */
 
-.navbar h2 {
+.dark-mode .navbar h2 {
     font-size: 1.5rem;
     color: #000000;
     font-style: italic;
@@ -52,34 +43,35 @@
     text-shadow: 0 2px 20px #000000;
 }
 
-.magnify {
+.dark-mode .magnify {
     display: inline-block;
     cursor: none;
-  }
+}
 
-.char {
+.dark-mode .char {
     display: inline-block; 
     transition: transform 0.35s ease;
 }
   
-.char:hover {    
+.dark-mode .char:hover {    
     transform: scale(2);
     font-weight: 600;
 }
 
 
-.searchbar input {
-    width: 15rem;
+.dark-mode .searchbar input {
+    width: 12rem;
     padding: 0.5rem;
     border: 2px solid #00cccc; /* Teal border */
     border-radius: 8px;
     background-color: #fafafa;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #111;
     text-align: center;
 }
 
-.searchbar button {
+.dark-mode .searchbar button {
     padding: 0.5rem 1rem;
     background-color: #00cccc; /* Teal button */
     border: none;
@@ -90,11 +82,17 @@
     transition: background-color 0.3s ease;
 }
 
-.searchbar button:hover {
+.dark-mode .searchbar button:hover {
     background-color: #009999; /* Darker teal on hover */
 }
 
-.category {
+.dark-mode .dark-mode-button{
+    border: none;
+    background-color:#00cccc;
+    color: #f0efef;
+}
+
+.dark-mode .category {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,26 +105,26 @@
     padding: 0.5rem;
 }
 
-.category button {
+.dark-mode .category button {
     width: 10rem;
     height: 4rem;
     background-color: #000000; /* Black background */
     border-radius: 20px;
     border: none;
     color: #f0efef;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.category button:hover {
+.dark-mode .category button:hover {
     border-radius: 20px;
-    background-color: #009999; /* Darker teal */
+    background-color: #125858; /* Darker teal */
     transform: scale(1.05); 
 }
 
-body {
+.dark-mode body {
     font-family: 'Arial', sans-serif; 
     background-color: #000000; /* Black background */
     margin: 0;
