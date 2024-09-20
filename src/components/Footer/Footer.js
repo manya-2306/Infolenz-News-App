@@ -10,7 +10,7 @@ const Footer = () => {
 
             <div className="footernav1">
 
-                <div className="info">
+                <div className="info" >
                     <a href="">ABOUT US</a>
                     <a href="">AWARDS</a>
                     <a href="">HELP</a>

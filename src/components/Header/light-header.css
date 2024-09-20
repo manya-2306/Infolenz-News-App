@@ -86,7 +86,8 @@
 .light-mode .dark-mode-button{
     border: none;
     background-color:#d4af37;
-    color: #f0efef;
+    color: #5a4f4f;
+    font-size: 1.3rem;
 }
 
 .light-mode .category {

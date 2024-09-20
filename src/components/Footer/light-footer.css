@@ -40,8 +40,15 @@
 {
   text-decoration: none;
   color: #d4af37; 
+  transition: all .3s ease;
 }
-  
+
+.light-mode .info a:hover
+{
+  text-decoration:underline #d4af37;
+  color: #d4af37; 
+}
+
 .light-mode .footernav2 {
   display: flex;
   flex-direction: row;
@@ -65,6 +72,13 @@
 .light-mode .social-icon{
   color: #d4af37;
   font-size: 1.6rem;
+  transition: all .4s ease-out;
+}
+
+
+.light-mode .social-icon:hover{
+  color: #d4af37;
+  font-size: 4rem;
 }
   
 .light-mode .legal {  

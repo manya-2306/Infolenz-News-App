@@ -36,8 +36,13 @@
 .dark-mode .info a {
   text-decoration: none;
   color: #000000;
+  transition: all .3s ease;
 }
 
+.dark-mode .info a:hover {
+  text-decoration: underline black;
+  color: #000000;
+}
 .dark-mode .footernav2 {
   display: flex;
   flex-direction: row;
@@ -61,6 +66,12 @@
 .dark-mode .social-icon{
   color: #000;
   font-size: 1.6rem;
+  transition: all .4s ease-out;
+}
+
+.dark-mode .social-icon:hover{
+  color: #000;
+  font-size: 4rem;
 }
 
 .dark-mode .legal {  

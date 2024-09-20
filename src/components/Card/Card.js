@@ -10,6 +10,7 @@ const Card=({data})=>{
 
            {data.map((currelement,index,data) => {
            
+           if (currelement.title!='[Removed]')
            return (
 
                 <div className="card" key={index}> 
@@ -17,13 +18,13 @@ const Card=({data})=>{
                     <img src={currelement.urlToImage ? currelement.urlToImage : altImage} alt={currelement.title}/>
                     <div className="cardcontent">
 
-                    <a href={currelement.title} onClick={()=>window.open(currelement.url)}>{currelement.title}</a>
-                    <p>{currelement.description}  </p>
-                    <button onClick={()=>window.open(currelement.url)}>READ MORE</button>
-                    
-                </div> 
+                        <a href={currelement.title} onClick={()=>window.open(currelement.url)}>{currelement.title}</a>
+                        <p>{currelement.description}  </p>
+                        <button onClick={()=>window.open(currelement.url)}>READ MORE</button>
+        
+                    </div> 
                 
-            </div>
+                </div>
 
            );
            
