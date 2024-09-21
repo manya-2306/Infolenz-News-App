@@ -1,8 +1,11 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
 import SidePanel from './components/SidePanel/SidePanel'; 
+//import AboutUs from './components/Footer/Aboutus';  
+//import './components/Footer/Aboutus.css';
 
 function App() {
 
@@ -74,6 +77,23 @@ function App() {
             <Footer />
         </div>
     );
+  return (
+    <Router>
+      <div className="App">
+        <Header 
+          search={search} 
+          onSearchChange={handleSearchChange} 
+          onSearchClick={() => getData(search)}
+          categoryclick={handleCategoryClick}
+        />
+        <Routes>
+          <Route path="/" element={<Card data={newsData} />} /> 
+          <Route path="/aboutus" element={<AboutUs />} />  {/* About Us page route */}
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
