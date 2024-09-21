@@ -2,7 +2,7 @@ import './light-header.css';
 import './dark-header.css';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
-const Header = ({ search, onSearchChange, onSearchClick, categoryclick, OnToggleDark,isDark }) => {
+const Header = ({ search, onSearchChange, onSearchClick, categoryclick, OnToggleDark,isDark,headline }) => {
   return (
     <div className="header">
 
@@ -42,6 +42,8 @@ const Header = ({ search, onSearchChange, onSearchClick, categoryclick, OnToggle
         <button onClick={() => categoryclick('Health')}>HEALTH</button>
         <button onClick={() => categoryclick('Lifestyle')}>LIFESTYLE</button>
       </div>
+
+      <p className="headline">{headline}</p>
 
     </div>
   );

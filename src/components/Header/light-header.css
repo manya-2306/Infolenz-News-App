@@ -121,6 +121,10 @@
     transform: scale(1.05);
 }
 
+.light-mode .headline{
+    color: wheat;
+}
+
 .light-mode body {
     font-family: 'Arial', sans-serif;
     background-color: #ffffff; /* White background */

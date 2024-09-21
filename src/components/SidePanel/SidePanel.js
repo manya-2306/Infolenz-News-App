@@ -26,7 +26,7 @@ const SidePanel = () => {
         if (isVisible){
             
             setIsGlidingOut(true);
-            setTimeout(() => {setIsVisible(false);}, 100);
+            setTimeout(() => {setIsVisible(false);}, 50);
         }
     };
 

@@ -5,8 +5,8 @@
     width: 20%;    
     height: 100%;    
     background-color:rgba(112, 160, 164,.97); 
-    color: white;   
-    transition: right 0.5s ease; 
+    color: rgb(17, 53, 68);   
+    transition: right 0.5s ease-out; 
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     padding: 2.5rem;
     z-index: 1000;   

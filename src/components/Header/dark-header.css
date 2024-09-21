@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1.5rem;
+    gap:1.005rem;
     background-color: #000000; /* Black background */
     box-shadow: 0 4px 8px rgba(0, 204, 204, 0.3); /* Teal shadow */
 }
@@ -124,6 +125,24 @@
     background-color: #125858; /* Darker teal */
     transform: scale(1.05); 
 }
+
+.dark-mode .headline{
+    
+    color: rgb(209, 222, 231);
+    animation:move 10s linear infinite;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+
 
 .dark-mode body {
     font-family: 'Arial', sans-serif; 
