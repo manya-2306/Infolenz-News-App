@@ -123,7 +123,20 @@
 
 .light-mode .headline{
     color: wheat;
+    animation: move infinite 10s linear ;
 }
+
+
+@keyframes move {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+
 
 .light-mode body {
     font-family: 'Arial', sans-serif;
