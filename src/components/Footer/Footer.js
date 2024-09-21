@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"; 
 import "./Footer.css"
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
@@ -10,10 +11,10 @@ const Footer = () => {
             <div className="footernav1">
 
                 <div className="info">
-                    <a href="">ABOUT US</a>
-                    <a href="">AWARDS</a>
-                    <a href="">HELP</a>
-                    <a href="">CONTACT US</a>
+                <Link to="/about-us">ABOUT US</Link>
+                    <Link to="/awards">AWARDS</Link> 
+                     <Link to="/help">HELP</Link> 
+                     <Link to="/contact-us">CONTACT US</Link>
                 </div>
                 
             </div>

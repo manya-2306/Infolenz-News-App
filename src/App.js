@@ -1,10 +1,12 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from './components/Header/Header';
 import './components/Header/Header.css';
 import Card from './components/Card/Card';
 import './components/Card/Card.css'; 
 import Footer from './components/Footer/Footer';
-
+//import AboutUs from './components/Footer/Aboutus';  
+//import './components/Footer/Aboutus.css';
 
 function App() {
   const [newsData, setNewsData] = useState([]);
@@ -16,9 +18,10 @@ function App() {
     try {
       const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`);
       const jsonData = await response.json();
-      setNewsData(jsonData.articles);
+      console.log("Fetched data:", jsonData); // Log the entire response
+        console.log("Articles:", jsonData.articles); // Log th
+      setNewsData(jsonData.articles|| []);
     } 
-
     catch (error) {
       console.error("Error fetching news data:", error);
     }
@@ -29,7 +32,6 @@ function App() {
   };
 
   const handleCategoryClick=(category)=>{
-
     setSearch(category);
     getData(category);
   }
@@ -39,16 +41,21 @@ function App() {
   },[])
 
   return (
-    <div className="App">
-      <Header 
-        search={search} 
-        onSearchChange={handleSearchChange} 
-        onSearchClick={() => getData(search)}
-        categoryclick={handleCategoryClick}
-      />
-      <Card data={newsData} />
-      <Footer/>
-    </div>
+    <Router>
+      <div className="App">
+        <Header 
+          search={search} 
+          onSearchChange={handleSearchChange} 
+          onSearchClick={() => getData(search)}
+          categoryclick={handleCategoryClick}
+        />
+        <Routes>
+          <Route path="/" element={<Card data={newsData} />} /> 
+          <Route path="/aboutus" element={<AboutUs />} />  {/* About Us page route */}
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 
