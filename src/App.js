@@ -4,8 +4,11 @@ import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
 import SidePanel from './components/SidePanel/SidePanel'; 
-//import AboutUs from './components/Footer/Aboutus';  
-//import './components/Footer/Aboutus.css';
+import AboutUs from './components/Footer/Aboutus/Aboutus';  
+import Contactus from './components/Footer/Contactus/Contactus';  
+import Help from './components/Footer/Help/Help';  
+import Awards from './components/Footer/Awards/Awards';  
+
 
 function App() {
 
@@ -61,6 +64,8 @@ function App() {
     }, []);
 
     return (
+
+      <Router>
         <div className={`App ${isDark ? 'dark-mode' : 'light-mode'}`}>
             <Header 
                 search={search} 
@@ -72,28 +77,23 @@ function App() {
                 headline={headline}
             />
             
-            <Card data={newsData} />
             <SidePanel /> 
-            <Footer />
+        
+            <Routes>
+              <Route path="/"          element={<Card data={newsData} />} /> 
+              <Route path="/aboutus"   element={<AboutUs />} /> 
+              <Route path="/Awards"    element={<Awards/>} /> 
+              <Route path="/Help"      element={<Help />} /> 
+              <Route path="/Contactus" element={<Contactus/>} /> 
+            </Routes>
+        
+            <Footer/> 
+            
         </div>
+          
+      </Router>
+      
     );
-  return (
-    <Router>
-      <div className="App">
-        <Header 
-          search={search} 
-          onSearchChange={handleSearchChange} 
-          onSearchClick={() => getData(search)}
-          categoryclick={handleCategoryClick}
-        />
-        <Routes>
-          <Route path="/" element={<Card data={newsData} />} /> 
-          <Route path="/aboutus" element={<AboutUs />} />  {/* About Us page route */}
-        </Routes>
-        <Footer/>
-      </div>
-    </Router>
-  );
 }
 
 export default App;

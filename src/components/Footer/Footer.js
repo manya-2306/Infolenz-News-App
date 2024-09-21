@@ -12,12 +12,14 @@ const Footer = () => {
             <div className="footernav1">
 
                 <div className="info">
-                <Link to="/about-us">ABOUT US</Link>
-                    <Link to="/awards">AWARDS</Link> 
-                     <Link to="/help">HELP</Link> 
-                     <Link to="/contact-us">CONTACT US</Link>
-                </div>
+                    
+                    <Link to="/">HOME</Link>
+                    <Link to="/Aboutus">ABOUT US</Link>
+                    <Link to="/Awards">AWARDS</Link> 
+                    <Link to="/Help">HELP</Link> 
+                    <Link to="/Contactus">CONTACT US</Link>
                 
+                </div>
             </div>
 
             <div className="footernav2">
