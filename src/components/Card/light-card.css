@@ -76,3 +76,13 @@
 .light-mode  .card button:hover {
     background-color: #fbcb2e; /* Darker black on hover */
 }
+
+.light-mode .empty-page{
+
+    background-color: #ffffff;
+    color: #000000da;
+    padding: 10rem;
+    height: 80vh;
+    text-align: center;
+    font-size: 2rem;
+}

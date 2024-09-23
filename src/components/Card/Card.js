@@ -6,7 +6,7 @@ const Card=({data})=>{
 
     // Check if data is undefined or not an array, and provide a fallback
     if (!Array.isArray(data) || data.length === 0) {
-        return <div>No data available.</div>; // Or return null or a loading state
+        return <div className="empty-page">NO DATA AVAILABLE :( </div>; // Or return null or a loading state
     }
 
     return (

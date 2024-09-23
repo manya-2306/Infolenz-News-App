@@ -76,3 +76,13 @@
 .dark-mode .card button:hover {
     background-color: #009999;
 }
+
+.dark-mode .empty-page{
+
+    background-color: #111; 
+    color: rgb(142, 198, 203);
+    padding: 10rem;
+    height: 80vh;
+    text-align: center;
+    font-size: 2rem;
+}
