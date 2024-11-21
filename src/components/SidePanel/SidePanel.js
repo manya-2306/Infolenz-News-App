@@ -10,9 +10,6 @@ const SidePanel = () => {
         const windowHeight = window.innerHeight;
 
         if (e.clientX > 0.8 *windowWidth && e.clientY >0.4*windowHeight) {
-            
-            if (isGlidingOut)
-            setIsGlidingOut(false);
 
             if(!isVisible)
             setIsVisible(true);
@@ -23,11 +20,9 @@ const SidePanel = () => {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         
-        if (isVisible){
-            
-            setIsGlidingOut(true);
-            setTimeout(() => {setIsVisible(false);}, 50);
-        }
+        if (isVisible)
+        setIsVisible(false);
+    
     };
 
     useEffect(() => {
