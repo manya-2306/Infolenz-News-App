@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
+    gap:1.005rem;
     background-color: #000000; /* Dark header background */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Crazy shadow */
 }
@@ -59,9 +60,9 @@
 .light-mode .searchbar input {
     width: 12rem;
     padding: 0.5rem;
-    border: 2px solid #d4af37; /* Light golden border */
+    border: 2px solid #d4af37; 
     border-radius: 8px;
-    background-color: #fafafa; /* Light background */
+    background-color: #fafafa; 
     font-size: 1.1rem;
     font-weight: 600;
     color: #000000; 

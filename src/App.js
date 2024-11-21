@@ -8,7 +8,7 @@ import AboutUs from './components/Footer/Aboutus/Aboutus';
 import Contactus from './components/Footer/Contactus/Contactus';  
 import Help from './components/Footer/Help/Help';  
 import Awards from './components/Footer/Awards/Awards';  
-
+import Widget from "./components/Widget/widget";
 
 function App() {
 
@@ -80,14 +80,17 @@ function App() {
             <SidePanel /> 
         
             <Routes>
-              <Route path="/"          element={<Card data={newsData} />} /> 
+              <Route path="/"          element={<Card data={newsData}/>} /> 
               <Route path="/aboutus"   element={<AboutUs />} /> 
               <Route path="/Awards"    element={<Awards/>} /> 
               <Route path="/Help"      element={<Help />} /> 
               <Route path="/Contactus" element={<Contactus/>} /> 
             </Routes>
+
+            <Widget/>
         
             <Footer/> 
+
             
         </div>
           

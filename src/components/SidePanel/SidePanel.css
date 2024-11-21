@@ -18,8 +18,8 @@
 }
 
 .light-mode .side-panel {   
-    background-color:rgba(209, 200, 99,.97); 
-    color: rgb(75, 20, 20);    
+    background-color:#d1c863f7; 
+    color: #4b1414;    
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 

@@ -9,11 +9,12 @@ const SidePanel = () => {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
 
-        if (e.clientX > 0.8 *windowWidth && e.clientY >0.4*windowHeight) {
-
-            if(!isVisible)
-            setIsVisible(true);
+        if (e.clientX > 0.8 * windowWidth && e.clientY > 0.4 * windowHeight && e.clientY < 0.6 * windowHeight) {
+            if (!isVisible) {
+                setIsVisible(true);
+            }
         }
+        
     };
 
     const handleMouseLeave = (e) => {
