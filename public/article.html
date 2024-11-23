@@ -4,28 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake News Check</title>
-  <link rel="stylesheet" href="light-trend.css" id="theme-style">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(187, 215, 232);
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      color: rgb(85, 85, 85);
+      padding-top: 20px;
+    }
+
+    .article-container {
+      width: 95%;
+      background-color: rgb(187, 215, 232);
+      box-shadow: 0 6px 18px rgba(3, 85, 209, 0.3);
+      border-radius: 15px;
+      padding: 40px 50px;
+      text-align: center;
+      line-height: 1.6;
+      transition: transform 0.2s;
+    }
+
+    .headline {
+      font-size: 2.7rem;
+      font-weight: 700;
+      color: rgb(57, 77, 121);
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+      transition: all ease-in .3s;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .headline:hover {
+      transform: scale(1.05);
+      color: rgb(34, 50, 86);
+    }
+
+    .article-content {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-align: justify;
+      color: rgb(34, 50, 86);
+      line-height: 1.7;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    .check-fake-button {
+      background-color: rgb(3, 85, 209);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.4s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .check-fake-button:hover {
+      background-color: rgb(2, 65, 158);
+      transform: scale(1.05);
+    }
+
+    .check-fake-button:active {
+      transform: scale(0.95);
+    }
+
+    .check-fake-button:focus {
+      outline: none;
+    }
+  </style>
 </head>
 
 <body>
-
   <div class="article-container">
-    <h1 class="headline"></h1>
-    <div class="article-content"></div>
+    <h2 class="headline"></h2>
+    <p class="article-content"></p>
     <button class="check-fake-button">Check for Fake News</button>
   </div>
 
-
   <script>
-  
-    const params = new URLSearchParams(window.location.search);
-    const headline = params.get('headline');
-    const content = params.get('content');
-
-    document.querySelector('.headline').textContent = headline;
-    document.querySelector('.article-content').textContent = content;
-
-  
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const headline = params.get('headline');
+      const content = params.get('content');
+      document.querySelector('.headline').textContent = headline;
+      document.querySelector('.article-content').textContent = content;
+    });
   </script>
 </body>
 </html>
