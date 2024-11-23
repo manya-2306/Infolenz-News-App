@@ -4,7 +4,7 @@
     right: -20vw;   
     width: 20%;    
     height: 100%;    
-    background-color:rgba(141, 199, 205, 0.97); 
+    background-color:rgba(145, 185, 190, 0.97); 
     color: rgb(17, 53, 68);   
     transition: right 0.6s ease-out; 
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -18,7 +18,7 @@
 }
 
 .light-mode .side-panel {   
-    background-color:#d1c863f7; 
+    background-color:#e6b447; 
     color: #4b1414;    
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }

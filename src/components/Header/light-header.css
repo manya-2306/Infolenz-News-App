@@ -18,7 +18,7 @@
     justify-content: space-evenly;
     align-items: center;
     border: none;
-    background-color: #d4af37; /* Light golden background */
+    background-color: #ffcf33;
     width: 100%;
     height: 40%;
     padding: 0.5rem;
@@ -38,7 +38,7 @@
     color: #000000; /* Black text */
     font-style: italic;
     font-weight: 600; /* Bolder */
-    text-shadow: 0 2px 20px #000000;
+    text-shadow: 0 2px 20px #454545;
 }
 
 
@@ -59,8 +59,8 @@
 
 .light-mode .searchbar input {
     width: 12rem;
-    padding: 0.5rem;
-    border: 2px solid #d4af37; 
+    padding: .5rem;
+    border: 2px solid #ffcf33; 
     border-radius: 8px;
     background-color: #fafafa; 
     font-size: 1.1rem;
@@ -71,7 +71,7 @@
 
 .light-mode .searchbar button {
     padding: 0.5rem 1rem;
-    background-color: #d4af37; /* Black button */
+    background-color: #ffcf33; /* Black button */
     border: none;
     border-radius: 8px;
     color: white;
@@ -86,7 +86,7 @@
 
 .light-mode .dark-mode-button{
     border: none;
-    background-color:#d4af37;
+    background-color:#ffcf33;
     color: #5a4f4f;
     font-size: 1.3rem;
 }

@@ -5,7 +5,7 @@
   justify-content: space-between;
   height: 10rem;
   background-color: #000000;
-  color: #d4af37; 
+  color: #ffcf33; 
   border-radius: 12px; 
   max-width: 100%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Crazy shadow */
@@ -39,14 +39,14 @@
 .light-mode .info a 
 {
   text-decoration: none;
-  color: #d4af37; 
+  color: #ffcf33; 
   transition: all .3s ease;
 }
 
 .light-mode .info a:hover
 {
-  text-decoration:underline #d4af37;
-  color: #d4af37; 
+  text-decoration:underline #ffcf33;
+  color: #ffcf33; 
 }
 
 .light-mode .footernav2 {
@@ -70,14 +70,14 @@
 }
 
 .light-mode .social-icon{
-  color: #d4af37;
+  color: #ffcf33;
   font-size: 1.6rem;
   transition: all .4s ease-out;
 }
 
 
 .light-mode .social-icon:hover{
-  color: #d4af37;
+  color: #ffcf33;
   font-size: 4rem;
 }
   

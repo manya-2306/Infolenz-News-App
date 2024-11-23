@@ -129,7 +129,8 @@
 .dark-mode .headline{
     
     color: rgb(209, 222, 231);
-    animation:move 10s linear infinite;
+    animation:move 10s linear infinite;   
+
 }
 
 

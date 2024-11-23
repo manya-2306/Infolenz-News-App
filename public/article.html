@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake News Check</title>
+  <link rel="stylesheet" href="light-trend.css" id="theme-style">
+</head>
+
+<body>
+
+  <div class="article-container">
+    <h1 class="headline"></h1>
+    <div class="article-content"></div>
+    <button class="check-fake-button">Check for Fake News</button>
+  </div>
+
+
+  <script>
+  
+    const params = new URLSearchParams(window.location.search);
+    const headline = params.get('headline');
+    const content = params.get('content');
+
+    document.querySelector('.headline').textContent = headline;
+    document.querySelector('.article-content').textContent = content;
+
+  
+  </script>
+</body>
+</html>

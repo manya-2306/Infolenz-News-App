@@ -1,13 +1,16 @@
 .light-mode .cardcontainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: flex-start;
     padding: 2rem;
     gap: 1rem;
+    width: 80%;
+    background-color: #f7f7f7; 
+    border-radius: 8px;
 }
 
-.light-mode  .card {
+.light-mode .card {
     border: none;
     display: flex;
     flex-direction: column;
@@ -25,36 +28,36 @@
     margin-right: .1rem;
 }
 
-.light-mode  .card img {
+.light-mode .card img {
     height: 12rem;
     width: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
 }
 
-.light-mode  .cardcontent {
+.light-mode .cardcontent {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.light-mode  .card a {
+.light-mode .card a {
     font-size: 1.3rem;
-    color:#cea316;
+    color: #ddac0c;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.light-mode  .card a:hover {
+.light-mode .card a:hover {
     text-decoration: underline #d4af37;
 }
 
 .light-mode .card p {
     font-size: 1rem;
-    color:rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
     font-weight: 400;
     text-align: center;
     max-height: 6rem;
@@ -62,10 +65,10 @@
     text-overflow: ellipsis;
 }
 
-.light-mode  .card button {
+.light-mode .card button {
     padding: 0.5rem 1rem;
-    background-color: #d4af37; 
-    color:rgb(0, 0, 0);
+    background-color: #ffcf33;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -73,16 +76,6 @@
     font-weight: 500;
 }
 
-.light-mode  .card button:hover {
-    background-color: #fbcb2e; /* Darker black on hover */
-}
-
-.light-mode .empty-page{
-
-    background-color: #ffffff;
-    color: #000000da;
-    padding: 10rem;
-    height: 80vh;
-    text-align: center;
-    font-size: 2rem;
+.light-mode .card button:hover {
+    background: #e0a300;
 }

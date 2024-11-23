@@ -59,7 +59,7 @@
   color: #793c19;
 }
 
-.light-mode .headline-list {
+.light-mode .headlines {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
