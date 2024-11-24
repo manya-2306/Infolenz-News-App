@@ -1,0 +1,2 @@
+# InfoLenz:A React-Based News Platform with Fake News Detection
+ Infolenz is a dynamic news website built with React.js, featuring AI-powered fake news detection. It uses machine learning models like Decision Tree, Random Forest, Gradient Boost, and Logistic Regression to analyze and identify fake news. The platform combines real-time news aggregation with advanced AI to ensure users access trustworthy and authentic information.

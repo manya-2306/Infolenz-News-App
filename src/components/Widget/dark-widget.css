@@ -1,0 +1,119 @@
+.dark-mode .fun-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #006666;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 204, 204, 0.8);
+}
+
+.dark-mode .fun-widget:hover {
+  box-shadow: 0 0 30px rgba(0, 204, 204, 1);
+}
+
+.dark-mode .widget-icon {
+  font-size: 36px;
+  color: #e0e0e0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .fun-widget:hover .widget-icon {
+  transform: scale(1.1);
+  color: #fafafa;
+}
+
+.dark-mode .fun-widget.open {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode .widget-content {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 85%;
+  box-shadow: 0 4px 20px rgba(15, 236, 236, 0.614);
+  font-family: 'Arial', sans-serif;
+  color: #fafafa;
+  text-align: center;
+}
+
+.dark-mode .widget-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #00b3b3;
+}
+
+.dark-mode .headlines {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 200px;
+  overflow-y: auto;
+  gap: 0.5rem;
+}
+
+.dark-mode .eachheadline {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #006666;
+  color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 204, 204, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .eachheadline:hover {
+  background: #008080;
+  color: #ffffff;
+}
+
+.dark-mode #article-box {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  border: 1px solid #00cccc;
+  border-radius: 10px;
+  margin: 1rem 0;
+  background: #333;
+  color: #fafafa;
+}
+
+.dark-mode .check {
+  padding: 0.8rem 2rem;
+  background: #006666;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 204, 204, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .check:hover {
+  background: #008080;
+  color: #fafafa;
+  transform: translateY(-2px);
+}
