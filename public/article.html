@@ -26,6 +26,7 @@
 
     .article-container {
       width: 95%;
+      max-width: 600px;
       background-color: rgb(187, 215, 232);
       box-shadow: 0 6px 18px rgba(3, 85, 209, 0.3);
       border-radius: 15px;
@@ -85,6 +86,22 @@
       outline: none;
     }
 
+    .loading-bar-container {
+      width: 50%; /* Half the width of the page */
+      margin: 20px auto;
+      background-color: rgb(150, 200, 230);
+      height: 15px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .loading-bar {
+      width: 0;
+      height: 100%;
+      background-color: rgb(3, 85, 209);
+      transition: width 5s linear; /* 5-second loading animation */
+    }
+
     .results-container {
       margin-top: 20px;
       text-align: left;
@@ -104,6 +121,26 @@
     .results-container li {
       margin-bottom: 5px;
     }
+
+    /* Circular gauge container */
+    .fakeness-gauge-container {
+      margin-top: 30px;
+      text-align: center;
+      display: none; /* Hidden initially */
+    }
+
+    .fakeness-gauge {
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .message-container {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: rgb(50, 50, 50);
+      font-style: italic;
+    }
   </style>
 </head>
 
@@ -112,9 +149,20 @@
     <h2 class="headline"></h2>
     <p class="article-content"></p>
     <button class="check-fake-button">Check for Fake News</button>
+    <div class="loading-bar-container">
+      <div class="loading-bar" id="loading-bar"></div>
+    </div>
+    <div class="fakeness-gauge-container" id="fakeness-gauge-container">
+      <div id="fakeness-gauge" class="fakeness-gauge"></div>
+      <p id="fakeness-label" style="font-size: 1.2rem; margin-top: 10px;">Fakeness Percentage: 0%</p>
+    </div>
+    <div class="message-container" id="message-container">
+      Our fakeness percentage is meticulously calculated by taking into account the individual accuracies of our models!
+    </div>
     <div class="results-container" id="results"></div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const params = new URLSearchParams(window.location.search);
@@ -125,9 +173,25 @@
       document.querySelector('.headline').textContent = headline || "No headline provided";
       document.querySelector('.article-content').textContent = content || "No content provided";
 
-      // Handle button click
+      // Initialize the circular gauge
+      const fakenessGauge = new ProgressBar.Circle("#fakeness-gauge", {
+        color: "#FF0000",
+        strokeWidth: 10,
+        duration: 2000,
+        from: { color: "#008000" }, // Green for low fakeness
+        to: { color: "#FF0000" }, // Red for high fakeness
+        step: (state, circle) => {
+          circle.path.setAttribute("stroke", state.color);
+          const value = Math.round(circle.value() * 100);
+          document.getElementById("fakeness-label").textContent = `Fakeness Percentage: ${value}%`;
+        },
+      });
+
       const checkButton = document.querySelector('.check-fake-button');
       const resultsContainer = document.getElementById('results');
+      const loadingBar = document.getElementById('loading-bar');
+      const fakenessGaugeContainer = document.getElementById('fakeness-gauge-container');
+      const messageContainer = document.getElementById('message-container');
 
       checkButton.addEventListener('click', async () => {
         if (!content) {
@@ -135,8 +199,12 @@
           return;
         }
 
+        // Start the loading bar
+        loadingBar.style.width = "100%";
+
         try {
-          // Send POST request to Flask backend
+          await new Promise(resolve => setTimeout(resolve, 5000));
+
           const response = await fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -149,7 +217,16 @@
 
           const data = await response.json();
 
+          // Extract fakeness percentage
+          const percentage = parseFloat(data["Fakeness Percentage"].replace("%", ""));
+
+          // Show the gauge and animate it to the final percentage
+          fakenessGaugeContainer.style.display = "block"; // Show the gauge
+          messageContainer.style.display = "block"; // Show the message
+          fakenessGauge.animate(percentage / 100); // Animate directly to the percentage
+
           // Display prediction results
+          delete data["Fakeness Percentage"];
           resultsContainer.innerHTML = `
             <h3>Prediction Results:</h3>
             <ul>

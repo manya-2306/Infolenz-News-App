@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 import pickle
 import re
 from flask_cors import CORS
-
 import string
 
 # Load the vectorizer and models
@@ -17,6 +16,14 @@ with open("gradient_boost.pkl", "rb") as f:
 with open("random_forest.pkl", "rb") as f:
     random_forest_model = pickle.load(f)
 
+# Define model accuracies
+model_accuracies = {
+    "Logistic Regression": 0.986,  
+    "Decision Tree": 0.995,
+    "Gradient Boosting": 0.994,
+    "Random Forest": 0.991,
+}
+
 def clean_text(text):
     """Apply the same preprocessing as in training."""
     text = text.lower()
@@ -30,17 +37,37 @@ def clean_text(text):
     return text
 
 def predict_news(news):
-    """Run predictions for all models."""
+    """Run predictions for all models and calculate fakeness percentage."""
     processed_news = clean_text(news)
     transformed_text = vectorizer.transform([processed_news])
-    predictions = {
-        "Logistic Regression": logistic_model.predict(transformed_text)[0],
-        "Decision Tree": decision_tree_model.predict(transformed_text)[0],
-        "Gradient Boosting": gradient_boost_model.predict(transformed_text)[0],
-        "Random Forest": random_forest_model.predict(transformed_text)[0],
-    }
-    return {k: "Fake News" if v == 0 else "Not Fake News" for k, v in predictions.items()}
-
+    
+    predictions = {}
+    fake_models = []
+    
+    # Get predictions from all models
+    for model_name, model in [
+        ("Logistic Regression", logistic_model),
+        ("Decision Tree", decision_tree_model),
+        ("Gradient Boosting", gradient_boost_model),
+        ("Random Forest", random_forest_model),
+    ]:
+        pred = model.predict(transformed_text)[0]
+        predictions[model_name] = "Fake News" if pred == 0 else "Not Fake News"
+        if pred == 0:  # If the model says "Fake News"
+            fake_models.append(model_name)
+    
+    # Calculate fakeness percentage
+    total_models = len(predictions)
+    if fake_models:
+        avg_accuracy = sum(model_accuracies[model] for model in fake_models) / len(fake_models)
+        fakeness_percentage = (len(fake_models) / total_models) * avg_accuracy * 100
+    else:
+        fakeness_percentage = 0.0
+    
+    # Add fakeness percentage to the results
+    predictions["Fakeness Percentage"] = f"{fakeness_percentage:.2f}%"
+    
+    return predictions
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
